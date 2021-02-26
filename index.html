@@ -7,23 +7,30 @@
   </head>
 
   <body>
-    <h1>CP2</h1>
+    <h1 id="pageTitle">Pokedex lite</h1>
 
-    <div class="inputStuff">
-      <form>
-        <label>Enter a character name:</label>
-        <input id="characterInput" type="text"></input><br/>
-        <p></p>
-        <select id="selector">
-          <option value="ability">Abilities</option>
-          <option value="move">Moves</option>
-          <option value="pokemon">Pokemon</option>
-          <option value="item">Items</option>
-        </select>
-        <p></p>
-        <input id="characterSubmit" type="submit" value="Submit"></input>
-      </form>
+    <div class="big-body">
+      <div class="inputStuff">
+        <form>
+          <label>Enter a name:</label>
+          <input id="characterInput" type="text"></input><br/>
+          <p></p>
+          <select id="selector">
+            <option value="ability">Abilities</option>
+            <option value="move">Moves</option>
+            <option value="pokemon">Pokemon</option>
+            <option value="item">Items</option>
+          </select>
+          <p></p>
+          <input id="characterSubmit" type="submit" value="Submit"></input>
+        </form>
+      </div>
+
+      <div class="qResponse">
+        <img id="sprite" src="/images/pokedex.png" />
+      </div>
     </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
     <script text="type/javascript" src="/script.js">

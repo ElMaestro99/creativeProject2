@@ -19,9 +19,11 @@ document.getElementById("characterSubmit").addEventListener("click", function(ev
         results += json.id + " " + json.name + " power: " + json.power;
       }
       else if (type === "pokemon") {
+        document.getElementById("sprite").src = json.sprites.front_default;
         results += json.id + " " + json.name;
       }
       else if (type === "item") {
+        document.getElementById("sprite").src = json.sprites.default;
         results += json.id + " " + json.name + " description: " + json.effect_entries[0].effect;
       }
 

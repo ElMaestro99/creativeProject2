@@ -1,0 +1,27 @@
+#pageTitle {
+  text-align: center;
+}
+
+.big-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: yellow;
+}
+
+.inputStuff {
+  background-color: blue;
+  width: 200px;
+}
+
+.qResponse {
+  display: flex;
+  width: 75%;
+  background-color: red;
+  justify-content: center;
+}
+
+#sprite {
+  width: 40%;
+}
