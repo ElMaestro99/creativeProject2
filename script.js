@@ -39,7 +39,14 @@ document.getElementById("characterSubmit").addEventListener("click", function(ev
       }
       else if (type === "item") {
         document.getElementById("sprite").src = json.sprites.default;
-        results += json.id + " " + json.name + " description: " + json.effect_entries[0].effect;
+        let itemName = null;
+        for (let i = 0; i < json.names.length; i += 1) {
+          if (json.names[i].language.name === "en") { itemName = json.names[i].name;}
+        }
+        if (itemName === null) { itemName = json.names[0].name; }
+        results += "<h2>" + itemName + "</h2><div class='itemDescription'>" + json.effect_entries[0].effect;
+        results += "</div><div class='itemAttr'><div id='itemCost'>" + "Cost: " + json.cost + "</div><div id='fling'>";
+        results += "Fling power: " + json.fling_power + "</div></div>";
       }
 
       document.getElementById("underSprite").innerHTML = results;

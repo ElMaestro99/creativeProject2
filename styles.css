@@ -73,3 +73,19 @@
   padding: 6px;
   border: solid black 2px;
 }
+
+.itemAttr {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#itemCost {
+  margin: 16px;
+  margin-top: 4px;
+}
+
+#fling {
+  margin: 16px;
+  margin-top: 4px;
+}
