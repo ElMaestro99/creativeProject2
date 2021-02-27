@@ -13,18 +13,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: yellow;
 }
 
 .inputStuff {
-  background-color: blue;
   width: 200px;
 }
 
 .qResponse {
   display: flex;
   width: 75%;
-  background-color: red;
   justify-content: center;
   text-align: center;
   flex-direction: column;
@@ -33,6 +30,7 @@
 #sprite {
   width: 40%;
   align-self: center;
+  padding: 12px;
 }
 
 .pkmnTypes {
@@ -55,7 +53,6 @@
 }
 
 #tableHead {
-  background-color: pink;
   border: solid black 2px;
 }
 
@@ -63,13 +60,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: purple;
   border: solid gray 2px;
 }
 
 #tableElement {
   width: 150px;
-  background-color: orange;
   padding: 6px;
   border: solid black 2px;
 }
@@ -86,6 +81,47 @@
 }
 
 #fling {
+  margin: 16px;
+  margin-top: 4px;
+}
+
+#moveDescription {
+  margin: 16px;
+  margin-top: 4px;
+}
+
+.moveData {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#mvType {
+  margin: 16px;
+  margin-top: 4px;
+}
+
+#dmgType {
+  margin: 16px;
+  margin-top: 4px;
+}
+
+#mvDamage {
+  margin: 16px;
+  margin-top: 4px;
+}
+
+#mvAccuracy {
+  margin: 16px;
+  margin-top: 4px;
+}
+
+#powerPoints {
+  margin: 16px;
+  margin-top: 4px;
+}
+
+#effectChance {
   margin: 16px;
   margin-top: 4px;
 }

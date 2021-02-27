@@ -14,11 +14,29 @@ document.getElementById("characterSubmit").addEventListener("click", function(ev
       let results = "";
       if (type === "ability") {
         document.getElementById("sprite").src = "/images/pokedex.png";
-        results += json.id + " " + json.name + " " + json.effect_entries[0];
+        results += "<h2>" + capitalizeFirst(json.name) + "</h2>";
+        let abilityDescription = null;
+        for (let i = 0; i < json.effect_entries.length; i += 1) {
+          if (json.effect_entries[i].language.name === "en") { abilityDescription = json.effect_entries[i].effect; }
+        }
+        if (abilityDescription === null) { abilityDescription = json.effect_entries[0].effect; }
+        results += "<div id='abilityDescription'>" + abilityDescription + "</div>";
       }
       else if (type === "move") {
         document.getElementById("sprite").src = "/images/pokedex.png";
-        results += json.id + " " + json.name + " power: " + json.power;
+        results += "<h2>" + capitalizeFirst(json.name) + "</h2>";
+        let moveDescription = null;
+        for (let i = 0; i < json.flavor_text_entries.length; i += 1) {
+          if (json.flavor_text_entries[i].language.name === "en") { moveDescription = json.flavor_text_entries[i].flavor_text; }
+        }
+        if (moveDescription === null) { moveDescription = json.flavor_text_entries[0].text; }
+        results += "<div id='moveDescription'>" + moveDescription + "</div><div class='moveData'>";
+        results += "<div id='mvType'>Move Type: " + capitalizeFirst(json.type.name) + "</div>";
+        results += "<div id='dmgType'>Damage Type: " + capitalizeFirst(json.damage_class.name) + "</div>";
+        results += "</div><div class='moveData'><div id='mvDamage'>Damage: " + json.power + "</div>";
+        results += "<div id='mvAccuracy'>Accuracy: " + json.accuracy + "</div></div><div class='moveData'>";
+        results += "<div id='powerPoints'>PP: " + json.pp + "</div>";
+        results += "<div id='effectChance'>Effect chance: " + json.effect_chance + "</div></div>";
       }
       else if (type === "pokemon") {
         document.getElementById("sprite").src = json.sprites.front_default;
@@ -50,8 +68,6 @@ document.getElementById("characterSubmit").addEventListener("click", function(ev
       }
 
       document.getElementById("underSprite").innerHTML = results;
-
-      console.log(results);
     })
 
 });
