@@ -13,9 +13,11 @@ document.getElementById("characterSubmit").addEventListener("click", function(ev
       console.log(json);
       let results = "";
       if (type === "ability") {
+        document.getElementById("sprite").src = "/images/pokedex.png";
         results += json.id + " " + json.name + " " + json.effect_entries[0];
       }
       else if (type === "move") {
+        document.getElementById("sprite").src = "/images/pokedex.png";
         results += json.id + " " + json.name + " power: " + json.power;
       }
       else if (type === "pokemon") {
