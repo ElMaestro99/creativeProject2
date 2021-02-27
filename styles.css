@@ -13,10 +13,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-color: #D40101;
 }
 
 .inputStuff {
   width: 200px;
+  margin-bottom: 32px;
 }
 
 .qResponse {
@@ -25,12 +27,16 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  border-left: solid black 6px;
 }
 
 #sprite {
-  width: 40%;
+  width: 35%;
   align-self: center;
   padding: 12px;
+  margin-top: 16px;
+  background-color: white;
+  border: solid black 4px;
 }
 
 .pkmnTypes {
@@ -52,15 +58,10 @@
   justify-content: center;
 }
 
-#tableHead {
-  border: solid black 2px;
-}
-
 #tableBody {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: solid gray 2px;
 }
 
 #tableElement {
@@ -124,4 +125,20 @@
 #effectChance {
   margin: 16px;
   margin-top: 4px;
+}
+
+#underSprite {
+  margin-bottom: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #308CF5;
+}
+
+#gitLink {
+  color: black;
+  align-self: center;
+  margin: 25px;
 }
